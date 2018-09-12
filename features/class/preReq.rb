@@ -26,4 +26,14 @@ class PreReq
         find('[class="btnFechar btn btn-success"]').click
         find('[class="btnFechar btn btn-danger"]').click
     end
+
+    def PreReq.excluirEscalaDiaria()
+        find('[class="radioBtn radioPesquisar col-xs-6"]').click
+        find('[id=CodigoOPMHorarioEquipePesquisa]').find(:option, 'C Tel Div Adm Fin').select_option
+        find('[id=CodigoRegimeTrabalhoHorarioEquipe]').find(:option, '5x2').select_option
+        find('#PesquisarHorario').click
+        find('[src$="excluir.png"]', match: :first).click
+        find('[class$="btnSimConfirma"]').click
+        find('[class="btnFechar btn btn-success"]').click
+    end
 end
