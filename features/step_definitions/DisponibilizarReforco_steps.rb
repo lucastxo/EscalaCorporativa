@@ -7,8 +7,10 @@ Quando("eu preencho os campos de Disponibilizar Reforco com os seguintes dados:"
     @reforco = table.rows_hash
     
     find('[id=CodigoOpmPesquisa]').find(:option, @reforco[:origem]).select_option
-    find('[id=OpmDestinoSelecionada]').set @reforco[:destino]
-    find('[id=ui-id-1]').find('[class=ui-corner-all]', :text => @reforco[:destino], match: :first).click
+    if !@reforco[:destino].to_s.empty?
+        find('[id=OpmDestinoSelecionada]').set @reforco[:destino]
+        find('[id=ui-id-1]').find('[class=ui-corner-all]', :text => @reforco[:destino], match: :first).click
+    end
     
     if @reforco[:data] == 'valida'
         t = Time.now
@@ -18,12 +20,16 @@ Quando("eu preencho os campos de Disponibilizar Reforco com os seguintes dados:"
     end
     find('[id=OpmDestinoSelecionada]').click
     find('[class^="btnConfirmar"]').click
-    find('[class$=checkVerTodos]').click
-    find('[class=btnPesquisar]').click
-    find('[class="dualListBox-source col-xs-12"]').find(:option, 'MAJ PM 9103015 GUSTAVO').select_option
-    find('[class$="dualListBox-add"]').click
-    find('[class^="btnSalvarCadastro"]').click
-
+    exists = page.has_css?('[class$=checkVerTodos]')
+    if exists == true
+        find('[class$=checkVerTodos]').click
+        find('[class=btnPesquisar]').click
+        if !@reforco[:PM].to_s.empty?
+            find('[class="dualListBox-source col-xs-12"]').find(:option, @reforco[:PM]).select_option
+            find('[class$="dualListBox-add"]').click
+        end
+        find('[class^="btnSalvarCadastro"]').click
+    end
 end
   
 Então("a seguinte mensagem de Disponibilizar Reforco deve aparecer {string}") do |mensagem_alerta|

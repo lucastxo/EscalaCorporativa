@@ -28,16 +28,16 @@ Contexto:Acessar tela de incluir feriado
         | abrangencia | <abrangencia> |
         | tipo        | <tipo>        |
         | entrada     | <entrada>     |
-        | horaSaida   | <horaSaida>       |
+        | horaSaida   | <horaSaida>   |
         Então a seguinte mensagem de incluir feriado deve aparecer "<saida>"
 
         Exemplos: 
         | data   | descricao     | abrangencia | tipo       | entrada | horaSaida | saida                                              |
-        |        | teste feriado | Nacional    | Data Móvel | 0700   | 0800     | Favor preencher                                    |
-        | valida |               | Nacional    | Data Móvel | 0700   | 0800     | Favor preencher                                    |
-        | valida | teste feriado |             | Data Móvel | 0700   | 0800     | Favor preencher                                    |
-        | valida | teste feriado | Nacional    |            | 0700   | 0800     | Favor preencher                                    |
-        | valida | teste feriado | Nacional    | Data Móvel | 0700   | 0700     | Hora de entrada é maior ou igual que Hora de saída |
-        | valida | teste feriado | Nacional    | Data Móvel | 0700   | 0600     | Hora de entrada é maior ou igual que Hora de saída |
+        |        | teste feriado | Nacional    | Data Móvel | 0700   | 0800       | Favor preencher                                    |
+        | valida |               | Nacional    | Data Móvel | 0700   | 0800       | Favor preencher                                    |
+        | valida | teste feriado |             | Data Móvel | 0700   | 0800       | Favor preencher                                    |
+        | valida | teste feriado | Nacional    |            | 0700   | 0800       | Favor preencher                                    |
+        | valida | teste feriado | Nacional    | Data Móvel | 0700   | 0700       | Hora de entrada é maior ou igual que Hora de saída |
+        | valida | teste feriado | Nacional    | Data Móvel | 0700   | 0600       | Hora de entrada é maior ou igual que Hora de saída |
 
 
