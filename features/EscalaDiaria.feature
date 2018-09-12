@@ -36,4 +36,14 @@ Contexto:Acessar tela de Escala Diaria
     |              | 09:00       | 18:00     | Sábado      | Descrição          | 
     | teste escala |             | 18:00     | Sábado      | Horário de entrada | 
     | teste escala | 09:00       |           | Sábado      | Horário de saída   | 
-    | teste escala | 09:00       | 18:00     |             | 1º Folga           | 
+    | teste escala | 09:00       | 18:00     |             | 1º Folga           |
+
+    Cenário: Criar Escala Diaria com horario menor que aceitavel
+    Quando eu preencho os campos de criar escala diaria com os seguintes dados:
+    | opm         | C Tel Div Adm Fin      |
+    | regime      | 5x2 40h                |
+    | descricao   | teste escala           |
+    | horaEntrada | 09:00                  |
+    | horaSaida   | 10:00                  |
+    | folga       | Sábado                 |   
+    Então a seguinte mensagem de Escala Diaria deve aparecer "Para o regime de trabalho escolhido"
