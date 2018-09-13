@@ -36,4 +36,10 @@ class PreReq
         find('[class$="btnSimConfirma"]').click
         find('[class="btnFechar btn btn-success"]').click
     end
+
+    def PreReq.excluirPosto()
+        find('[src$="excluir.png"]', match: :first).click
+        find('[class$="btnSimConfirma"]').click
+        find('[class="btnFechar btn btn-success"]').click
+    end
 end

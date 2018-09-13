@@ -9,7 +9,7 @@ Quando("eu preencho os campos de incluir feriado com os seguintes dados:") do |t
     
     if @feriado[:data] == 'valida'
         t = Time.now
-        t = t+10000000
+        t = t+ 1000000578
         t = t.strftime '%d%m%Y'
         find('#DataFeriado').set '00/00/0000'
         find('#DataFeriado').set t

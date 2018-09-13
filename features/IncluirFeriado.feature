@@ -15,8 +15,8 @@ Contexto:Acessar tela de incluir feriado
     | descricao   | teste feriado |
     | abrangencia | Nacional      |
     | tipo        | Data Móvel    |
-    | entrada     | 0700         |
-    | horaSaida   | 0800         |
+    | entrada     | 0700          |
+    | horaSaida   | 0800          |
     Então a seguinte mensagem de incluir feriado deve aparecer "Inclusão efetuada com sucesso."
     E excluo o feriado criado
 
@@ -37,7 +37,6 @@ Contexto:Acessar tela de incluir feriado
         | valida |               | Nacional    | Data Móvel | 0700   | 0800       | Favor preencher                                    |
         | valida | teste feriado |             | Data Móvel | 0700   | 0800       | Favor preencher                                    |
         | valida | teste feriado | Nacional    |            | 0700   | 0800       | Favor preencher                                    |
-        | valida | teste feriado | Nacional    | Data Móvel | 0700   | 0700       | Hora de entrada é maior ou igual que Hora de saída |
         | valida | teste feriado | Nacional    | Data Móvel | 0700   | 0600       | Hora de entrada é maior ou igual que Hora de saída |
 
 
