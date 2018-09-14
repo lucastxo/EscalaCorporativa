@@ -14,3 +14,6 @@ Capybara.configure do |config|
     Capybara.ignore_hidden_elements = false
     Capybara.page.driver.browser.manage.window.maximize
 end
+
+browser = Capybara.current_session.driver.browser
+browser.manage.delete_all_cookies
