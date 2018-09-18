@@ -6,10 +6,10 @@ end
   
 Quando("eu preencho os campos de incluir feriado com os seguintes dados:") do |table|
     @feriado = table.rows_hash
-    
+    binding.pry
     if @feriado[:data] == 'valida'
         t = Time.now
-        t = t+ 1000000578
+        t = t+ 100000099
         t = t.strftime '%d%m%Y'
         find('#DataFeriado').set '00/00/0000'
         find('#DataFeriado').set t

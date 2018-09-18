@@ -42,4 +42,11 @@ class PreReq
         find('[class$="btnSimConfirma"]').click
         find('[class="btnFechar btn btn-success"]').click
     end
+
+    def PreReq.criarRegime()
+        find('#CodigoSelecaoInclusao').find(:option, '5x2').select_option
+        find('#QuantidadeHorasMinimaSemana').set '90'
+        find('#SalvarFolgaRegimeTrabalho').click
+        find('[class="btnFechar btn btn-success"]').click
+    end
 end
