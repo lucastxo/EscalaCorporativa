@@ -6,7 +6,6 @@ end
   
 Quando("eu preencho os campos de incluir feriado com os seguintes dados:") do |table|
     @feriado = table.rows_hash
-    binding.pry
     if @feriado[:data] == 'valida'
         t = Time.now
         t = t+ 100000099

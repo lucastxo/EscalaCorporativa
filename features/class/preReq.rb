@@ -49,4 +49,19 @@ class PreReq
         find('#SalvarFolgaRegimeTrabalho').click
         find('[class="btnFechar btn btn-success"]').click
     end
+
+    def PreReq.criarFeriado()
+        t = Time.now
+        t = t+ 100050000
+        t = t.strftime '%d%m%Y'
+        find('#DataFeriado').set '00/00/0000'
+        find('#DataFeriado').set t
+        find('#DescricaoFeriado').set 'Teste Feriado'
+        find('#AbrangenciaFeriado').find(:option, 'Nacional').select_option
+        find('#DescricaoFeriado').click
+        find('[class*="radioBtn col-xs-3"]').click
+        find('#DescricaoFeriado').click
+        find('[class^="btnSalvarCadastro"]').click
+        find('[class="btnFechar btn btn-success"]').click
+    end
 end
