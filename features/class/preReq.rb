@@ -64,4 +64,12 @@ class PreReq
         find('[class^="btnSalvarCadastro"]').click
         find('[class="btnFechar btn btn-success"]').click
     end
+
+    def PreReq.criarPosto()
+        find('[id=PostoOpm]').find(:option, 'C Tel Div Adm Fin').select_option
+        fill_in('PostoDescricao', :with => 'teste')
+        find('[class^="btnSalvarCadastro"]').click
+        find('[class$="btnSimConfirma"]').click
+        find('[class="btnFechar btn btn-success"]').click
+    end
 end

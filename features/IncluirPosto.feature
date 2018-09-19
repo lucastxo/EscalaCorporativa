@@ -20,4 +20,4 @@ Contexto:Acessar tela de incluir posto
     Quando eu preencho os campos de Incluir posto com os seguintes dados:
     | opm       | C Tel Div Adm Fin |
     | descricao |                   |
-    Então a seguinte mensagem de Incluir posto deve aparecer "A Descrição é obrigatória"
+    Então a seguinte mensagem de Incluir posto deve aparecer "Descrição"
