@@ -9,15 +9,14 @@ Quando("eu preencho os campos de criar escala efetiva com os seguintes dados:") 
     find('[class$=icone-efetivo]').click
     if !@escala[:opm].to_s.empty?
         find('[id=CodigoOpmSelecionada]', match: :first).find(:option, @escala[:opm]).select_option
-        sleep(1)
+        sleep(2)
     end
     if !@escala[:horario].to_s.empty?
         find('[class$="horario-escala-diaria"]', match: :first).find(:option, @escala[:horario]).select_option
-        sleep(1)
+        sleep(2)
     end
     if !@escala[:posto].to_s.empty?
         find('[class$="posto-escala-diaria"]', match: :first).find(:option, @escala[:posto]).select_option
-        sleep(1)
     end
     find('[class^=btnConfirmar]').click
     exists = page.has_css?('[id=visualizar-filtroPesquisa]')
