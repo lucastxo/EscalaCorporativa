@@ -11,10 +11,10 @@ Contexto:Acessar tela de Escala efetiva
 
     Cenário: Criar Escala efetiva com todos os dados corretos
     Quando eu preencho os campos de criar escala efetiva com os seguintes dados:
-    | opm          | C Tel Div Telef Som         |
-    | horario      | teste (Administrativo)      |
-    | posto        | teste posto                 |
-    | pm           | MAJ PM 8718962 CARRUBA      |
+    | opm          | C Tel Div Op                |
+    | horario      | teste (Operacional)         |
+    | posto        | teste                       |
+    | pm           | MAJ PM 876243A TOCACELLI    |
     | funcao       | Chefe de Subseção           |
     | viatura      | 12-95                       |
     | policiamento | FORÇA TÁTICA                | 
@@ -24,10 +24,10 @@ Contexto:Acessar tela de Escala efetiva
     Esquema do Cenario: Campos obrigatórios
 
     Quando eu preencho os campos de criar escala efetiva com os seguintes dados:
-    | opm          | C Tel Div Telef Som         |
+    | opm          | C Tel Div Op                |
     | horario      | <horario>                   |
     | posto        | <posto>                     |
-    | pm           | MAJ PM 8718962 CARRUBA      |
+    | pm           | MAJ PM 876243A TOCACELLI    |
     | funcao       | <funcao>                    |
     | viatura      | 12-95                       |
     | policiamento | FORÇA TÁTICA                | 
@@ -35,5 +35,5 @@ Contexto:Acessar tela de Escala efetiva
 
     Exemplos:
     | horario                | posto       | funcao            | saida              |
-    |                        | teste posto | Chefe de Subseção | Horário/Equipe     |
-    | teste (Administrativo) | teste posto |                   | Função             | 
+    |                        | teste       | Chefe de Subseção | Horário/Equipe     |
+    | teste (Operacional)    | teste       |                   | Função             | 
